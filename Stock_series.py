@@ -1,0 +1,25 @@
+# time series analysis
+#Stocks of 20 days
+
+stock_prices = [34.68, 36.09, 34.94, 33.97, 34.68, 35.82, 43.41, 44.29, 44.65, 53.56, 49.85, 48.71, 48.71, 49.94, 48.53, 47.03, 46.59, 48.62, 44.21, 47.21]
+
+def price_at(x) :    # price on a given day x
+  return stock_prices[x-1]
+
+def max_price(a, b) :  # maximum price from day a to day b
+  mx = 0
+  for i in range(a, b+1) :
+    mx = max(mx, price_at(i))
+  return mx
+
+def min_price(a, b) : # minimum price from day a to day b
+  mn = price_at(a)
+  for i in range(a, b+1) :
+    mn = min(mn, price_at(i))
+  return mn
+
+print(price_at(2))
+
+print(max_price(2, 14))
+
+print(min_price(1, 6))
