@@ -5,4 +5,4 @@ todo= ['🏦 Get quarters.','🧺 Do laundry.','🌳 Take a walk.','💈 Get a h
 print(todo[0])
 print(todo[1])
 print(todo[2:5])
-print(todo[9])
+print(todo[9]) #To show Index Out of Range Error
